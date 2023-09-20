@@ -34,3 +34,7 @@ jobs:
         run: |
           echo Add other actions to build,
           echo test, and deploy your project.
+      
+      # Runs a check of the OS version
+      - name: Ask the system for information
+        run: lsb_release -a > ${{ github.workspace }}/release.txt
